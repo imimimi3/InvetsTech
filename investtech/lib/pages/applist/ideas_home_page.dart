@@ -26,12 +26,6 @@ class IdeasHome extends StatelessWidget {
           children: [
             Column(
               children: <Widget>[
-                // Divider(color: Color.fromRGBO(196, 196, 196, 1),),
-                
-                // IdeaHome(id: 1,),
-                // IdeaHome(id: 2,),
-                // IdeaHome(id: 3,),
-
                 for(int i = 0; i < 15; i++) IdeaHome(id: i,),
               ],
             ),

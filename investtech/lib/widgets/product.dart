@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:investtech/models/products.dart';
 import 'package:investtech/widgets/new_notification.dart';
-// import 'package:investtech/models/currencies.dart';
-// import 'package:investtech/widgets/indicator.dart';
-// import 'package:investtech/widgets/new_notification.dart';
+
 import 'package:investtech/widgets/resume.dart';
 
 class Product extends StatefulWidget {
@@ -167,66 +165,3 @@ class _ProductState extends State<Product> {
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'package:investtech/models/currencies.dart';
-// import 'package:investtech/widgets/indicator.dart';
-// import 'package:investtech/widgets/new_notification.dart';
-// import 'package:investtech/widgets/resume.dart';
-
-// class Product extends StatefulWidget {
-//   final int id;
-//   const Product({Key key, this.id,}) : super(key: key);
-
-//   @override
-//   _ProductState createState() => _ProductState();
-// }
-
-// class _ProductState extends State<Product> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final ProductsData productsData = ProductsData();
-
-//     int index = productsData.productsData.indexOf((productsData.productsData.firstWhere((product) => product.id == widget.id)));
-
-//     return Scaffold(
-//       backgroundColor: Color.fromRGBO(48, 54, 61, 1),
-//       appBar: AppBar(
-//         centerTitle: false,
-//         elevation: 0,
-//         backgroundColor: Color.fromRGBO(203, 207, 212, 1),
-//         iconTheme: IconThemeData(color: Colors.black),
-//         title: Row(
-//           children: [
-//             Text(
-//               productsData.productsData[index].title,
-//               style: TextStyle(
-//                 color: Colors.black,
-//                 fontSize: 18,
-//                 ),
-//             ),
-
-//             IconButton(
-//               icon: Icon(Icons.notifications_active),
-//               color: Colors.black,
-//               onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewNotification(id: widget.id,))),
-//             ),
-//           ],
-//         ),
-//       ),
-//       body: Container(
-//         child: ListView(
-//           children: [
-//             Column(
-//               children: [
-//                 Text('КОТИРОВКИ'), //!
-
-//                 Resume(id: widget.id,),
-//               ],
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }

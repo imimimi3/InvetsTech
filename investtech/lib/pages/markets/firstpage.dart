@@ -47,21 +47,6 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin{
                       Tab(
                         text: 'ETF',
                       ),
-                      // Tab(
-                      //   text: 'Акции',
-                      // ),
-                      // Tab(
-                      //   text: 'Криптовалюты',
-                      // ),
-                      // Tab(
-                      //   text: 'Облигации',
-                      // ),
-                      // Tab(
-                      //   text: 'Фьючерсы',
-                      // ),
-                      // Tab(
-                      //   text: 'Фонды',
-                      // ),
                     ],
                   ),
                 ],
@@ -74,11 +59,6 @@ class _FirstPageState extends State<FirstPage> with TickerProviderStateMixin{
             WatchList2(),
             WatchList3(),
             WatchList4(),
-            // WatchList5(),
-            // WatchList6(),
-            // WatchList7(),
-            // WatchList8(),
-            // WatchList9(),
           ],
         ),
       ),

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:investtech/models/notifications.dart';
-// import 'package:investtech/models/products_home.dart';
-
-// import 'package:investtech/widgets/product.dart';
 
 class NewNotification extends StatelessWidget {
   final int id;
@@ -11,7 +8,6 @@ class NewNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final NotificationsData notificationsData = NotificationsData();
-    //final ProductsData productsData =ProductsData();
 
     int index = notificationsData.notificationsData.indexOf((notificationsData.notificationsData.firstWhere((notif) => notif.id == id)));
 
@@ -51,7 +47,6 @@ class NewNotification extends StatelessWidget {
                   ),
                 ],
               ),
-
             ],
         ),
          )

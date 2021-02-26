@@ -136,47 +136,6 @@ class Registration extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(bottom: 200),
                   ),
-
-                  // Container(
-                  //   margin: const EdgeInsets.only(top:10, bottom: 175),
-                  //   child: GestureDetector(
-                  //     onTap: () {
-                  //       AlertDialog(
-                  //         content: SingleChildScrollView(
-                  //           child: ListBody(
-                  //             children: <Widget>[
-                  //               Text(
-                  //                 'Спасибо за регистрацию',
-                  //                 style: TextStyle(
-                  //                   fontSize: 25,
-                  //                   color: Colors.blue[300],
-                  //                 ),
-                  //               ),
-                  //               Text(
-                  //                 'Проверьте почту',
-                  //                 style: TextStyle(
-                  //                   fontSize: 25,
-                  //                   color: Colors.blue[300],
-                  //                 ),
-                  //               ),
-                  //             ],
-                  //           ),
-                  //         ),
-                  //         actions: <Widget>[
-                  //           TextButton(
-                  //             child: Text('ОК'),
-                  //             onPressed: () {
-                  //               Navigator.of(context).pop();
-                  //             },
-                  //           ),
-                  //         ],
-                  //       );
-                        
-                        // Navigator.pop(context);
-                  //     },
-                  //   ),
-                  // ),
-
                 ],
               ),
             ),

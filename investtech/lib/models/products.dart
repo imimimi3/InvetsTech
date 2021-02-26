@@ -17,8 +17,6 @@ Future<Products> productsData(String prod) async {
   } else {
     throw Exception('Failed to load data');
   }
-
-  
 }
 
 class Products {
@@ -42,52 +40,3 @@ class Products {
     );
   }
 }
-
-
-// Future<List<Products>> productsData(String prod) async {
-//   final response = await http.get('http://10.0.2.2:5000/todo/api/tasks/$prod');
-  
-//   var st;
-
-//   if (response.statusCode == 200) {
-//     st = jsonDecode(response.body);
-//     //return Album.fromJson(st[0]);
-//   } else {
-//     throw Exception('Failed to load data');
-//   }
-
-//   Map data = st[0];
-//   int index = 0;
-//   List<Products> qwe = [];
-
-//   for(var item in data.entries){
-//     if (item.key != '_id'){
-//       if (item.key.substring(0, 12) == '/currencies/'){
-//         qwe.add(Products.fromJson(index,item.key.substring(12, item.key.length), item.value));
-//       }
-//       else 
-//       // {if (!item.key.endWith('btc-eur'))
-//         qwe.add(Products.fromJson(index,item.key.substring(8, item.key.length), item.value));
-//         // }
-//       index++;
-//     }
-//   }
-
-//   return qwe;
-// }
-
-// class Products {
-//   final int id;
-//   final String title;
-//   final String prise;
-
-//   Products({this.id, this.title, this.prise,});
-  
-//   factory Products.fromJson(id, key, value) {
-//     return Products(
-//       id: id,
-//       title: key,
-//       prise: value,
-//     );
-//   }
-// }

@@ -46,10 +46,4 @@ class NotificationsData{
   List<Notifications> get notificationsData => [...data];
 
   set addNotification(Notifications newNotifications) => data.add(newNotifications);
-    // DateTime now = DateTime.now();
-    // String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(now);
-
-    // Notifications newNotifications = new Notifications(id: 4, id_prod: newIDProd, title: newTitle, price: newPrice, date:formattedDate);
-  //   _data.add(newNotifications);
-  // }
 }

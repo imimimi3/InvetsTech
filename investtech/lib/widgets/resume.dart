@@ -112,14 +112,6 @@ class _ResumeState extends State<Resume> {
                   ),
                 ),
 
-                // Container(
-                //   decoration: BoxDecoration(
-                //     border: Border(
-                //       bottom: BorderSide(color: Colors.black,width: 10.0),
-                //     ),
-                //   ),
-                // ),
-
                 FutureBuilder<Products>(
                   future: data_prod,
                   builder: (context, snapshot) {

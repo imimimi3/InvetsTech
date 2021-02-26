@@ -19,7 +19,7 @@ class _NotificationsHomeState extends State<NotificationsHome> {
         backgroundColor: Color.fromRGBO(203, 207, 212, 1),
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
-          'Избранное',
+          'Уведомления',
           style: TextStyle(
             color: Colors.black,
             ),
