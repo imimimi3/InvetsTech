@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:investtech/widgets/notification.dart';
 
-class NotificationsHome extends StatelessWidget {
+class NotificationsHome extends StatefulWidget {
   const NotificationsHome({Key key}) : super(key: key);
 
+  @override
+  _NotificationsHomeState createState() => _NotificationsHomeState();
+}
+
+class _NotificationsHomeState extends State<NotificationsHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +30,7 @@ class NotificationsHome extends StatelessWidget {
           children: [
             Column(
               children: [
-                for(int i = 1; i < 5; i++) NewNotification(id: i,),
+                for(int i = 1; i < 4; i++) NewNotification(id: i,),
               ],
             ),
           ],

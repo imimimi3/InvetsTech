@@ -34,22 +34,7 @@ class NewNotification extends StatefulWidget {
   _NewNotificationState createState() => _NewNotificationState();
 }
 
-void createN(String newIDProd, String newPrice) {
-  DateTime now = DateTime.now();
-  String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(now);
 
-  Notifications newNotifications = new Notifications(
-      id: 4,
-      id_prod: newIDProd,
-      title: newIDProd,
-      price: newPrice,
-      date: formattedDate);
-
-  NotificationsData data = NotificationsData();
-
-  data.addNotification = newNotifications;
-  //addNotification(newNotifications);
-}
 
 class _NewNotificationState extends State<NewNotification> {
   var data_prod;
@@ -58,6 +43,23 @@ class _NewNotificationState extends State<NewNotification> {
   void initState() {
     super.initState();
     data_prod = productsData(widget.id);
+  }
+
+  void createN(String newIDProd, String newPrice) {
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(now);
+
+    Notifications newNotifications = new Notifications(
+        id: 4,
+        id_prod: newIDProd,
+        title: newIDProd,
+        price: newPrice,
+        date: formattedDate);
+
+    NotificationsData data = NotificationsData();
+
+    data.addNotification = newNotifications;
+    //addNotification(newNotifications);
   }
 
   String dropdownValue = 'Рост выше';
@@ -193,7 +195,7 @@ class _NewNotificationState extends State<NewNotification> {
                           Navigator.pop(context),
                           createN(
                             snapshot.data.name,
-                            context.watch<Data>().getData,
+                            Provider.of<Data>(context, listen: false).getData,
                           ),
                         },
                         padding: const EdgeInsets.symmetric(
@@ -208,6 +210,23 @@ class _NewNotificationState extends State<NewNotification> {
                             fontSize: 18,
                           ),
                         ),
+                      ),
+                      FlatButton(
+                        child: Text(
+                          'Создать',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                          ),
+                        ),
+                        onPressed: () => {
+                          
+                          createN(
+                            snapshot.data.name,
+                            Provider.of<Data>(context, listen: false).getData,
+                          ),
+                          //Navigator.pop(context),
+                        },
                       ),
                     ],
                   );
@@ -236,7 +255,7 @@ class TextPrice extends StatelessWidget {
         //   color: Colors.white,
         // ),
         child: TextField(
-          onChanged: (newData) => context.read<Data>().changeString(newData),
+          onChanged: (newData) => Provider.of<Data>(context, listen: false).changeString(newData), //context.read<Data>().changeString(newData), //Provider.of<Data>(context, listen: false).changeString(newData)
           decoration: InputDecoration(
             hintText: 'Укажите желаемую стоимость',
             hintStyle: TextStyle(
@@ -250,6 +269,13 @@ class TextPrice extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
 
 // import 'package:flutter/material.dart';
 // import 'package:investtech/models/notifications.dart';
